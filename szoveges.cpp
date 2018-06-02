@@ -26,11 +26,15 @@ int main(){
 	cout << "Milyen szinet szeretnel behelyettesiteni a $szin$ helyere?\n";
 	getline(cin, $szin$);
 	
-	string szoveg;
+	string szoveg, szo;
 	cout << "Ird le a szovegedet: ";
-	getline(cin, szoveg);
+	do{
+			cin >> szo;
+			szoveg = szoveg + szo + " ";
+	}while(szo != "[vege]");
 	cout << "--------------------------------------------------------\n";
 	
+	findAndReplaceAll(szoveg, "[vege]", "");
 	findAndReplaceAll(szoveg, "$nev$", $nev$);
 	findAndReplaceAll(szoveg, "$szin$", $szin$);
 	for(unsigned int i = 0; i < szoveg.length(); i++){
