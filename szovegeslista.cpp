@@ -35,7 +35,7 @@ char menu(){
 	
 void elkezd(node *&head, node *&last, string szo){
 	node *temp = new node;
-	temp->szo == szo;
+	temp->szo = szo;
 	temp->kov = NULL;
 	head = temp;
 	last = temp;
@@ -46,7 +46,7 @@ void beilleszt(node *&head, node *&last, string szo){
 		elkezd(head, last, szo);
 		}else {
 			node *temp = new node;
-			temp->szo == szo;
+			temp->szo = szo;
 			temp->kov = NULL;
 			last->kov = temp;
 			last = temp;
@@ -74,10 +74,13 @@ void mutat(node *current){
 		}else{
 			cout << "a szovege: \n";
 			while(current != NULL){
-				cout << current->szo << endl;
-				current = current->kov;
-				}
+					for(unsigned int i = 0; i < current->szo.length(); i++){
+						cout << current->szo.at(i);
+					};
+					cout << endl;
+					current = current->kov;
 			}
+		}
 	};
 
 
