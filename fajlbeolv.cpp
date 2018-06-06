@@ -25,7 +25,6 @@ int main(){
 	};
 	
 	string szoveg;
-	fajl >> szoveg;
 	while(fajl.good()){
 		fajl >> szoveg;
 		if(szoveg == "[vege]"){
