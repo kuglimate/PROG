@@ -35,7 +35,7 @@ int main(){
 		kitalalt[i] = "*";
 	};
 	for(unsigned int i = 0; i < szo.length();i++){
-		cout << szo.at(i);
+		cout << "*";
 	};
 	cout << "\n";
 	
